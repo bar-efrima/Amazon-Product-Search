@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+html {
+font-family: 'Rubik', sans-serif;
+  background-image: url('/static/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: white;
+}
+table {
+  width: 100%;
+  opacity: 90%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+#search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  border: none;
+
+}
+
+#search-input {
+  padding: 10px;
+  width: 350px;
+  border: none;
+}
+
+#search-form button {
+  background-color: #febd69;
+  color: black;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#search-form button:hover {
+  background-color: #f3a847;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+table img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+}/* Add this code to your styles.css */
+nav {
+  background-color: #131921;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  border-bottom: 4px solid #black;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0 ;
+  padding: 0 200px;
+  display: flex;
+  justify-content: left;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav li a:hover {
+  color: #febd69;
+}
+
+#animation-container {
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.error-message {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.logo-container {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-40%);
+}
+
+.logo-container img {
+  height: 30px; /* Adjust the height of the logo as desired */
+  padding: 5px 5px
+  width: auto;
+}
+#search-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+#search-icon {
+  height: 20px; /* Adjust the height of the logo as desired */
+  width: auto;
+  display: block;
+}
