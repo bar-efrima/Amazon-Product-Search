@@ -1,30 +1,98 @@
-# Amazon-Product-Search
-Welcome to my Amazon scraping project. 
-To run the project, please execute the following command: "uvicorn --Server:app --
+# **Amazon Product Search**
 
-# it's important to note that web scraping is intended for educational purposes only. It is crucial to review the terms of service and policies of each website to ensure scraping is permitted and to understand the guidelines for using their information.
+Welcome to the **Amazon Product Search** project! This application allows users to search for products on Amazon, view prices across various Amazon sites, and even revisit past searches. Please note that this project is for **educational purposes only**, and it’s essential to adhere to Amazon's terms of service and policies when conducting web scraping.
 
-# Project Description:
+---
 
-This project involved creating a web application (website) that displays item prices from various Amazon websites.
+## **How to Run the Project**
 
-The website was built using Python with the FastAPI framework.
+To get started, simply execute the following command:  
+```bash
+uvicorn --Server:app --
+```  
 
-The client side of the application was developed using plain HTML, JavaScript, and the fetch() API.
+---
 
-For the backend, a local file database (SQLite) was used to store user data and other necessary information. The site supports only one user, and there is no user authentication or individual data storage. All users share the same data.
+## **Disclaimer**
 
-Upon opening the root page, users are presented with a search page containing a text box and a SEARCH button. They can enter an item to search for on Amazon.com. The application then scrapes the Amazon.com search page and displays the top 10 results in a table with "Name" and "Image" columns.
+This project is for **educational purposes** only. Please review and respect the terms of service and policies of Amazon and any other websites you interact with. Ensure compliance with their guidelines before using this project.
 
-After selecting an item from the search results, users are shown a table with the price of the selected item from different Amazon sites. This information is obtained through scraping. To minimize waiting time, the scraping requests are executed in parallel.
+---
 
-All prices are displayed in USD, and the price values are clickable links that open the specific product page in a new tab.
+## **Project Overview**
 
-To improve matching of items across different Amazon websites, the ASIN (Amazon Standard Identification Number) from the Amazon.com product page is used to search for the same item on other websites. If a similar ASIN cannot be found, the item name from Amazon.com is used instead.
+This web application was designed to provide users with an easy and interactive way to:  
 
-If a similar item cannot be found on a specific Amazon website, the string "Not found" is displayed under the price column.
+- Search for items on Amazon.com.  
+- Compare prices for those items across different Amazon sites.  
+- View and revisit past searches for convenience.  
 
-Users have access to their past searches through a "My past searches" link.
+The project uses **Python** with the **FastAPI framework** for the backend and employs plain **HTML**, **JavaScript**, and the `fetch()` API for the frontend. Here's how it works:  
 
-If a user performs more than 10 searches in a single day, an error message is displayed: "Daily searches cap reached. Consider upgrading to the premium service to search for more items
+---
 
+### **Key Features**
+
+#### **1. Search and Results Display**
+- The home page presents a **search bar** and a **SEARCH** button.  
+- Users can enter an item name, and the application scrapes Amazon.com for the **top 10 search results**.  
+- Results are displayed in a table with columns for the **Name** and **Image** of each item.  
+
+#### **2. Price Comparison Across Amazon Websites**
+- Once an item is selected, users see a table showing the **price of the item** from different Amazon websites.  
+- All prices are displayed in **USD** for consistency.  
+- If an item isn't found on a specific Amazon site, the table displays "**Not found**."  
+- To improve accuracy, the application uses the product’s **ASIN (Amazon Standard Identification Number)** for cross-site searches.  
+
+#### **3. Fast and Parallel Scraping**
+- To minimize wait times, the application executes scraping requests in **parallel** for faster results.  
+
+#### **4. Clickable Links**
+- All displayed price values are clickable and will open the product page on the respective Amazon site in a **new tab**.  
+
+#### **5. Search History**
+- Users can revisit their searches through the **“My Past Searches”** link.  
+
+#### **6. Search Limitations**
+- To ensure fair usage, users are limited to **10 searches per day**.  
+- Upon exceeding this cap, an error message appears:  
+  *“Daily searches cap reached. Consider upgrading to the premium service to search for more items.”*  
+
+---
+
+## **Technical Details**
+
+### **Backend**
+- Built using **FastAPI**, a modern web framework for building APIs with Python.  
+- Utilizes a local file database (**SQLite**) to store user data and search history.  
+
+### **Frontend**
+- Built with **plain HTML** and **JavaScript**.  
+- Uses the `fetch()` API to handle communication with the backend.  
+
+### **Database**
+- **SQLite** database is used for simplicity and local storage of user data.  
+- Note: The application supports **only one user** at a time, and all data is shared across users.  
+
+---
+
+## **Usage Notes**
+
+- All users share the same search data and history. There is no user authentication or individual data storage.  
+- Ensure you have Python and necessary dependencies installed before running the project.  
+
+---
+
+## **Future Improvements**
+
+Here are some potential enhancements for the project:  
+- Adding **user authentication** for personalized search histories.  
+- Implementing a **premium service tier** for extended daily searches.  
+- Supporting multiple currencies and displaying price conversions dynamically.  
+- Expanding scraping capabilities to include more detailed product information.  
+
+---
+
+Feel free to explore and modify the project to suit your needs. We hope this application provides a useful foundation for learning about web scraping, API usage, and web development.  
+
+Happy coding! 😊
